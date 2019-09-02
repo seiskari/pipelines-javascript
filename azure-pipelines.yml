@@ -18,6 +18,7 @@ steps:
 - script: |
     npm install
     npm run build
+    npx mocha
   displayName: 'npm install and build'
 - task: VSTest@2
   inputs:
