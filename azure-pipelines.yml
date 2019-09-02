@@ -18,6 +18,16 @@ steps:
 - script: |
     npm install
     npm run build
-    mocha test --reporter mocha-junit-reporter
   displayName: 'npm install and build'
+- task: VSTest@2
+  inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\*test*.dll
+      !**\*TestAdapter.dll
+      !**\obj\**
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+    
+- script: mocha test --reporter mocha-junit-reporter
+  displayName: 'test'
 
