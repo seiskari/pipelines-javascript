@@ -22,6 +22,8 @@ steps:
 
 - script: npm install --only=dev
 
+- script: npx mocha
+
 
   
 
