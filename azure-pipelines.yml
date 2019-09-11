@@ -20,7 +20,7 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
-- script: npm install --only=dev
+- script: npm install -g --only=dev
 
 - script: npx mocha
 
