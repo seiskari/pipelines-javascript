@@ -20,7 +20,7 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
-- script: npm install -g
+- script: npm install npm@latest -g
 
 - script: npx mocha
 
