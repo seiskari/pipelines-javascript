@@ -22,7 +22,7 @@ steps:
 
 - script: npm install npm@latest -g
 
-- script: npx mocha
+- script: mocha test --reporter mocha-junit-reporter
 
 
   
