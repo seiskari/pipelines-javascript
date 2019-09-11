@@ -22,7 +22,6 @@ steps:
 
 - script: npm install -general
 - script: npm i mocha -g
-- 
 
 - script: mocha test --reporter mocha-junit-reporter
 
