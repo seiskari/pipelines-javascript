@@ -20,6 +20,10 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
+- script: |
+    npm audit fix
+  displayName: 'npm audit fix'
+
 
   
 
