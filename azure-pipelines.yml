@@ -13,16 +13,20 @@ steps:
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
+    checkLatest: true
   displayName: 'Install Node.js'
 
 - script: |
-    npm install
+    npx mocha
+    npm install -general
     npm run build
   displayName: 'npm install and build'
 
 - script: |
     npm audit fix --force
   displayName: 'npm audit fix'
+
+
 
 
   
