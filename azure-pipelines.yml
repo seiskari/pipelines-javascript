@@ -18,7 +18,7 @@ steps:
 
 - script: |
     npx mocha
-    npm install -general
+    npm Install
     npm run build
   displayName: 'npm install and build'
 
